@@ -21,7 +21,7 @@ if __name__ == '__main__':
     r = []
     for i in np.random.randint(1000, 10000, 1000):
         ri = binormalCounter(i)
-        print ri
+        #print ri
         r.append(ri)
     sns.kdeplot(np.array(r), shade = True)
     plt.show()

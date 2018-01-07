@@ -22,9 +22,24 @@ def longStr(str):
             max_l = li
     return max_n
 
+def longStr2(s):
+    dic, res, start, = {}, 0, 0
+    for i, ch in enumerate(s):
+        print i, ch
+        if ch in dic:
+            print i, ch
+            # update the res
+            res = max(res, i-start)
+            # here should be careful, like "abba"
+            start = max(start, dic[ch]+1)
+        dic[ch] = i
+    # return should consider the last
+    # non-repeated substring
+    return max(res, len(s)-start)
+
 
 
 #print longStr("abcabcbb")
 #print longStr("bbbbb")
 #print longStr("pwwkew")
-print longStr("dvdf")
+print longStr2("dvdf")

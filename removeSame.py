@@ -6,6 +6,10 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 #该脚本主要是找到列表中连续出现相同的元素后进行消除，类似开心消消乐
+"""
+A = ['a','a','b','b','b','c','c','c','a','c']
+return ['c']
+"""
 
 #计算元素连续出现的长度
 def calSame(array):

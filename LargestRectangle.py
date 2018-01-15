@@ -33,13 +33,15 @@ def largestRectangle2(heights):
     ans = 0
     flag = False
     while i < len(heights) and not flag:
-        while i < len(heights) - 1 and heights[i] <= heights[i + 1]:
+        ##从开始遍历列表，直到找到比初始位置更小的地方停止
+        while heights[i] <= heights[i+1]:
             i += 1
+        #如果i到列表末则停止
         if i == len(heights) - 1:
             flag = True
-        min_height = heights[i]
+        #查看之前路径中最短的距离
         for j in range(i, -1, -1):
-            min_height = min(min_height, heights[j])
+            min_height  = min(min_height, heights[i])
             ans = max(ans, min_height * (i - j + 1))
         i += 1
     return ans

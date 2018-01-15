@@ -7,5 +7,8 @@ sys.setdefaultencoding('utf8')
 #归并排序
 
 def mergeSort(nums):
-    minV = 0
-    maxV = 
+    def sort1(l, low, high):
+        if low > high:
+            return
+        else:
+            mid = (low + high) / 2

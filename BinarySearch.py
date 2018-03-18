@@ -24,5 +24,5 @@ if __name__ == '__main__':
     list = np.random.randint(0, 1000, size = 1000)
     a = int(np.mean(list))
     list.sort()
-    print list
-    print BinarySearch([0], 0)
+    #print list
+    print BinarySearch([1], 0)

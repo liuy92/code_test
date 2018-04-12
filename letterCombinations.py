@@ -28,4 +28,3 @@ def letterCombinations(digits):
                 return res_new
         else:
             return res
-    
